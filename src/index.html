@@ -4,27 +4,36 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>jeniesunflower</title>
-        <link href="./output.css" rel="stylesheet" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@^2.0/dist/full.css"
+            rel="stylesheet"
+        />
         <link
             rel="icon"
             href="../favicon/sunflower/favicon.ico"
             type="image/x-icon"
         />
     </head>
-    <body className="flex justify-center items-center">
-        <button
-            type="button"
-            class="btn btn-accent btn-outline w-64 rounded-full"
-        >
-            Дотронься
-        </button>
+    <body class="bg-gray-700">
+        <div class="sticky top-0 z-50 bg-white w-full">
+            <div id="waveform" class="h-48"></div>
+            <div id="time" class="text-center">
+                <span id="current-time">00:00</span> /
+                <span id="duration">00:00</span>
+            </div>
+            <button
+                type="button"
+                id="playPause"
+                class="btn btn-accent btn-outline rounded-full mx-auto block mt-4"
+            >
+                Воспроизвести / Пауза
+            </button>
+        </div>
+        <script src="https://unpkg.com/wavesurfer.js@7"></script>
         <script src="./audio.js"></script>
-        <audio id="background-music" controls autoplay loop>
-            <source
-                src="../audio/Unprocessed_-_Deadrose_(Vuxo7.com).mp3"
-                type="audio/mp3"
-            />
-            Ваш браузер не поддерживает элемент <code>audio</code>.
-        </audio>
     </body>
 </html>
