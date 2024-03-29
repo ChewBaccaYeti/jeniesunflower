@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>jeniesunflower</title>
+        <link href="./styles/input.css" rel="stylesheet" />
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
             rel="stylesheet"
@@ -18,22 +19,35 @@
             type="image/x-icon"
         />
     </head>
-    <body class="bg-gray-700">
-        <div class="sticky top-0 z-50 bg-white w-full">
-            <div id="waveform" class="h-48"></div>
-            <div id="time" class="text-center">
-                <span id="current-time">00:00</span> /
-                <span id="duration">00:00</span>
+    <body>
+        <script defer src="https://unpkg.com/wavesurfer.js@7"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+        <script defer type="module" src="./JS/audio.js"></script>
+        <script defer type="module" src="./JS/matrix.js"></script>
+        <!-- <script defer src="./JS/matrix_layout.js"></script> -->
+        <!-- <script defer type="module" src="./JS/fractal.js"></script> -->
+        <canvas id="rain"></canvas>
+            <div class="
+                sticky top-0 z-50
+                w-auto
+                m-4 p-4
+            ">
+            <div id="waveform" class="h-32"></div>
+                <div class="container">
+                    <div class="box" style="--i:1;"></div>
+                    <div id="time" class="flex flex-col justify-center items-center text-center">
+                        <div class="text-white" id="current-time">00:00</div>🦔🌹
+                        <div class="text-white" id="duration">00:00</div>
+                            <button
+                                type="button"
+                                id="playPause"
+                            >
+                                Доторкнись
+                            </button>
+                    </div>
+                    <div class="box" style="--i:2;"></div>
+                    <div id="fractal" class="mt-auto"></div>
+                </div>
             </div>
-            <button
-                type="button"
-                id="playPause"
-                class="btn btn-accent btn-outline rounded-full mx-auto block mt-4"
-            >
-                Воспроизвести / Пауза
-            </button>
-        </div>
-        <script src="https://unpkg.com/wavesurfer.js@7"></script>
-        <script src="./audio.js"></script>
     </body>
 </html>

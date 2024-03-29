@@ -1,18 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const wavesurfer = WaveSurfer.create({
         container: '#waveform',
-        waveColor: 'lightblue',
-        progressColor: 'darkblue'
+        waveColor: '#00f376',
+        progressColor: '#F8F005'
     });
 
     wavesurfer.load('../audio/Unprocessed_-_Deadrose_(Vuxo7.com).mp3');
 
     wavesurfer.on('ready', function () {
-        console.log('Аудіофайл завантажен та готов к відтворення');
-        wavesurfer.play();
-    });
-
-    wavesurfer.on('ready', function () {
+        console.log('Аудіофайл завантажен та готов до відтворення');
         document.getElementById('duration').textContent = formatTime(wavesurfer.getDuration());
         wavesurfer.play();
     });
@@ -26,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const seconds = Math.floor(time % 60);
         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
-
 
     document.getElementById('playPause').addEventListener('click', function () {
         wavesurfer.playPause();
