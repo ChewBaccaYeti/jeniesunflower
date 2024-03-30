@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         progressColor: '#F8F005'
     });
 
-    wavesurfer.load('/audio/unprocessed_-_deadrose_(vuxo7.com).mp3');
+    wavesurfer.load('https://chewbaccayeti.github.io/jeniesunflower/audio/unprocessed_-_deadrose_(vuxo7.com).mp3');
 
     wavesurfer.on('ready', function () {
         console.log('Аудіофайл завантажен та готов до відтворення');
