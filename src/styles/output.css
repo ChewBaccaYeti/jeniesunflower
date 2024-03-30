@@ -757,7 +757,7 @@ html {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
+    -moz-user-select: none;
           user-select: none;
   flex-wrap: wrap;
   align-items: center;
