@@ -10,9 +10,9 @@ const DEFAULT_OPTIONS = {
     fps: 24,
     hue: 120,
     limiter: 0.25,
-    glyphs:
-        'ラドクリフマラソンわたしワタシんょンョたばこタバコとうきょうトウキョウ0123456789±!@#$%^&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-    // glyphs: '01'
+    glyphs: 'Хочеш?',
+    //! glyphs: 'ラドクリフマラソンわたしワタシんょンョたばこタバコとうきょうトウキョウ0123456789±!@#$%^&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    //! glyphs: '01'
 }
 
 const DigitalRain = function (el, options) {
