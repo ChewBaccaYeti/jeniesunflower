@@ -1,20 +1,22 @@
+const wavesurfer = require('wavesurfer.js')
+
 document.addEventListener('DOMContentLoaded', function () {
-    const wavesurfer = WaveSurfer.create({
+    const waveSurfer = wavesurfer.create({
         container: '#waveform',
         waveColor: '#00f376',
         progressColor: '#F8F005'
     });
 
-    wavesurfer.load('https://chewbaccayeti.github.io/jeniesunflower/audio/pislya_dowu_hochew.mp3');
+    waveSurfer.load('https://chewbaccayeti.github.io/jeniesunflower/audio/pislya_dowu_hochew.mp3');
 
-    wavesurfer.on('ready', function () {
+    waveSurfer.on('ready', function () {
         console.log('Аудіофайл завантажен та готов до відтворення');
-        document.getElementById('duration').textContent = formatTime(wavesurfer.getDuration());
-        wavesurfer.play();
+        document.getElementById('duration').textContent = formatTime(waveSurfer.getDuration());
+        waveSurfer.play();
     });
 
-    wavesurfer.on('audioprocess', function () {
-        document.getElementById('current-time').textContent = formatTime(wavesurfer.getCurrentTime());
+    waveSurfer.on('audioprocess', function () {
+        document.getElementById('current-time').textContent = formatTime(waveSurfer.getCurrentTime());
     });
 
     function formatTime(time) {
@@ -24,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.getElementById('playPause').addEventListener('click', function () {
-        wavesurfer.playPause();
+        waveSurfer.playPause();
     });
 
-    wavesurfer.on('play', function () {
+    waveSurfer.on('play', function () {
         console.log('Відтворення');
     });
-    wavesurfer.on('pause', function () {
+    waveSurfer.on('pause', function () {
         console.log('Пауза');
     });
 });

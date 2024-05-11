@@ -18,7 +18,7 @@ const ctx = (() => {
 ctx.translate(CSIZE, CSIZE);
 ctx.lineCap = "round";
 
-onresize = () => {
+const onresize = () => {
     let D = Math.min(window.innerWidth, window.innerHeight) - 40;
     ctx.canvas.style.width = ctx.canvas.style.height = D + "px";
 }
